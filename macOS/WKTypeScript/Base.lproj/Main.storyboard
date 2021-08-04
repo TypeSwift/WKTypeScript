@@ -81,7 +81,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="190" height="600"/>
                             </visualEffectView>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ikz-7I-fFW">
-                                <rect key="frame" x="12" y="465" width="60" height="60"/>
+                                <rect key="frame" x="12" y="464" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="32u-Vv-4an"/>
                                     <constraint firstAttribute="width" constant="60" id="4rv-Am-qkO"/>
@@ -89,13 +89,13 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Sidebar-Header-Icon" id="cXV-e7-Bf4"/>
                             </imageView>
                             <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="40" horizontalPageScroll="10" verticalLineScroll="40" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWF-uv-CAf">
-                                <rect key="frame" x="0.0" y="0.0" width="190" height="453"/>
+                                <rect key="frame" x="0.0" y="0.0" width="190" height="452"/>
                                 <clipView key="contentView" drawsBackground="NO" id="gMs-0d-iBU">
-                                    <rect key="frame" x="0.0" y="0.0" width="190" height="453"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="190" height="452"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" autosaveColumns="NO" rowHeight="40" rowSizeStyle="automatic" viewBased="YES" indentationPerLevel="14" outlineTableColumn="8Xg-5e-Vj7" id="LLC-6A-FBH">
-                                            <rect key="frame" x="0.0" y="0.0" width="190" height="453"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="190" height="452"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="3" height="0.0"/>
                                             <color key="backgroundColor" red="0.0" green="0.41176470590000003" blue="0.85098039219999999" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -189,18 +189,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <wkWebView wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="keN-Lb-8J5">
+                            <wkWebView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="keN-Lb-8J5">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <autoresizingMask key="autoresizingMask"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="keN-Lb-8J5" firstAttribute="bottom" secondItem="B4q-7g-kPk" secondAttribute="bottom" id="GHE-xq-4bi"/>
+                            <constraint firstItem="keN-Lb-8J5" firstAttribute="trailing" secondItem="B4q-7g-kPk" secondAttribute="trailing" id="Kmk-mA-Vc4"/>
+                            <constraint firstItem="keN-Lb-8J5" firstAttribute="leading" secondItem="B4q-7g-kPk" secondAttribute="leading" id="eaQ-53-U8L"/>
+                            <constraint firstItem="keN-Lb-8J5" firstAttribute="top" secondItem="ffP-Wn-vFs" secondAttribute="top" id="nMI-n9-Zzd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="B4q-7g-kPk"/>
                         <viewLayoutGuide key="layoutMargins" id="c06-id-lM8"/>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="keN-Lb-8J5" id="teA-Ql-rE8"/>
+                    </connections>
                 </viewController>
                 <customObject id="lN7-9O-CI9" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
