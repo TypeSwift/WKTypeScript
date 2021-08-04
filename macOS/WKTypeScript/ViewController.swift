@@ -6,9 +6,12 @@
 //
 
 import Cocoa
+import WebKit
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, WKUIDelegate, WKNavigationDelegate {
 
+    @IBOutlet weak var webView: WKWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
