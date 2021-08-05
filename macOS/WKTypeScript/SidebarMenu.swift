@@ -23,19 +23,6 @@ enum SidebarMenu: String, CaseIterable {
     // MARK: Item Image
     var icon: NSImage {
         switch self {
-        case .discover: return NSImage(named: "Discover-Blue")!
-        case .arcade:  return NSImage(named: "Arcade-Blue")!
-        case .create: return NSImage(named: "Create-Blue")!
-        case .work: return NSImage(named: "Work-Blue")!
-        case .play: return NSImage(named: "Play-Blue")!
-        case .develop: return NSImage(named: "Develop-Blue")!
-        case .categories: return NSImage(named: "Categories-Blue")!
-        case .updates: return NSImage(named: "Updates-Blue")!
-        }
-    }
-    // Black & white icon variants
-    var iconBW: NSImage {
-        switch self {
         case .discover: return NSImage(named: "Discover")!
         case .arcade:  return NSImage(named: "Arcade")!
         case .create: return NSImage(named: "Create")!
@@ -46,6 +33,7 @@ enum SidebarMenu: String, CaseIterable {
         case .updates: return NSImage(named: "Updates")!
         }
     }
+    // MARK: Item URL
     var url: NSString {
         switch self {
         case .discover: return ""
