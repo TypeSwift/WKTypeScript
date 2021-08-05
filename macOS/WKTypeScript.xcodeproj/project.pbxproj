@@ -12,6 +12,9 @@
 		C20E729826B5B81F006315A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C20E729726B5B81F006315A6 /* Assets.xcassets */; };
 		C20E729B26B5B81F006315A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C20E729926B5B81F006315A6 /* Main.storyboard */; };
 		C2E12DC126BAF1D5002469E1 /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E12DC026BAF1D5002469E1 /* SidebarViewController.swift */; };
+		C2E12DC326BC1D6B002469E1 /* ToolbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E12DC226BC1D6B002469E1 /* ToolbarController.swift */; };
+		C2E12DC526BC1DC6002469E1 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E12DC426BC1DC6002469E1 /* WindowController.swift */; };
+		C2E12DC726BC1F0B002469E1 /* SidebarMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E12DC626BC1F0B002469E1 /* SidebarMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		C20E729C26B5B81F006315A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C20E729D26B5B81F006315A6 /* WKTypeScript.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WKTypeScript.entitlements; sourceTree = "<group>"; };
 		C2E12DC026BAF1D5002469E1 /* SidebarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
+		C2E12DC226BC1D6B002469E1 /* ToolbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarController.swift; sourceTree = "<group>"; };
+		C2E12DC426BC1DC6002469E1 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+		C2E12DC626BC1F0B002469E1 /* SidebarMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +63,10 @@
 			children = (
 				C20E729326B5B81D006315A6 /* AppDelegate.swift */,
 				C20E729526B5B81D006315A6 /* ViewController.swift */,
+				C2E12DC426BC1DC6002469E1 /* WindowController.swift */,
+				C2E12DC626BC1F0B002469E1 /* SidebarMenu.swift */,
 				C2E12DC026BAF1D5002469E1 /* SidebarViewController.swift */,
+				C2E12DC226BC1D6B002469E1 /* ToolbarController.swift */,
 				C20E729726B5B81F006315A6 /* Assets.xcassets */,
 				C20E729926B5B81F006315A6 /* Main.storyboard */,
 				C20E729C26B5B81F006315A6 /* Info.plist */,
@@ -136,6 +145,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C20E729626B5B81D006315A6 /* ViewController.swift in Sources */,
+				C2E12DC526BC1DC6002469E1 /* WindowController.swift in Sources */,
+				C2E12DC326BC1D6B002469E1 /* ToolbarController.swift in Sources */,
+				C2E12DC726BC1F0B002469E1 /* SidebarMenu.swift in Sources */,
 				C2E12DC126BAF1D5002469E1 /* SidebarViewController.swift in Sources */,
 				C20E729426B5B81D006315A6 /* AppDelegate.swift in Sources */,
 			);
@@ -286,7 +298,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = org.typeswift.WKTypeScript;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -309,7 +321,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = org.typeswift.WKTypeScript;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
