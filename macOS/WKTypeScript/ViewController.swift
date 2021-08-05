@@ -14,8 +14,9 @@ class ViewController: NSViewController, WKUIDelegate, WKNavigationDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        addObservers()
+        
     }
 
     override var representedObject: Any? {
@@ -23,7 +24,9 @@ class ViewController: NSViewController, WKUIDelegate, WKNavigationDelegate {
         // Update the view, if already loaded.
         }
     }
+}
 
-
+extension SidebarViewController {
+    
 }
 

@@ -15,6 +15,8 @@
 		C2E12DC326BC1D6B002469E1 /* ToolbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E12DC226BC1D6B002469E1 /* ToolbarController.swift */; };
 		C2E12DC526BC1DC6002469E1 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E12DC426BC1DC6002469E1 /* WindowController.swift */; };
 		C2E12DC726BC1F0B002469E1 /* SidebarMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E12DC626BC1F0B002469E1 /* SidebarMenu.swift */; };
+		C2E12DCC26BC269A002469E1 /* SidebarActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E12DCB26BC269A002469E1 /* SidebarActions.swift */; };
+		C2E12DCE26BC2791002469E1 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E12DCD26BC2791002469E1 /* Notifications.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		C2E12DC226BC1D6B002469E1 /* ToolbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarController.swift; sourceTree = "<group>"; };
 		C2E12DC426BC1DC6002469E1 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		C2E12DC626BC1F0B002469E1 /* SidebarMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarMenu.swift; sourceTree = "<group>"; };
+		C2E12DCB26BC269A002469E1 /* SidebarActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarActions.swift; sourceTree = "<group>"; };
+		C2E12DCD26BC2791002469E1 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,16 +67,42 @@
 			children = (
 				C20E729326B5B81D006315A6 /* AppDelegate.swift */,
 				C20E729526B5B81D006315A6 /* ViewController.swift */,
-				C2E12DC426BC1DC6002469E1 /* WindowController.swift */,
-				C2E12DC626BC1F0B002469E1 /* SidebarMenu.swift */,
-				C2E12DC026BAF1D5002469E1 /* SidebarViewController.swift */,
-				C2E12DC226BC1D6B002469E1 /* ToolbarController.swift */,
+				C2E12DCD26BC2791002469E1 /* Notifications.swift */,
+				C2E12DC826BC25F4002469E1 /* Window */,
 				C20E729726B5B81F006315A6 /* Assets.xcassets */,
 				C20E729926B5B81F006315A6 /* Main.storyboard */,
 				C20E729C26B5B81F006315A6 /* Info.plist */,
 				C20E729D26B5B81F006315A6 /* WKTypeScript.entitlements */,
 			);
 			path = WKTypeScript;
+			sourceTree = "<group>";
+		};
+		C2E12DC826BC25F4002469E1 /* Window */ = {
+			isa = PBXGroup;
+			children = (
+				C2E12DC426BC1DC6002469E1 /* WindowController.swift */,
+				C2E12DC926BC25FF002469E1 /* Sidebar */,
+				C2E12DCA26BC2606002469E1 /* Toolbar */,
+			);
+			path = Window;
+			sourceTree = "<group>";
+		};
+		C2E12DC926BC25FF002469E1 /* Sidebar */ = {
+			isa = PBXGroup;
+			children = (
+				C2E12DCB26BC269A002469E1 /* SidebarActions.swift */,
+				C2E12DC626BC1F0B002469E1 /* SidebarMenu.swift */,
+				C2E12DC026BAF1D5002469E1 /* SidebarViewController.swift */,
+			);
+			path = Sidebar;
+			sourceTree = "<group>";
+		};
+		C2E12DCA26BC2606002469E1 /* Toolbar */ = {
+			isa = PBXGroup;
+			children = (
+				C2E12DC226BC1D6B002469E1 /* ToolbarController.swift */,
+			);
+			path = Toolbar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,12 +174,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2E12DCE26BC2791002469E1 /* Notifications.swift in Sources */,
 				C20E729626B5B81D006315A6 /* ViewController.swift in Sources */,
 				C2E12DC526BC1DC6002469E1 /* WindowController.swift in Sources */,
 				C2E12DC326BC1D6B002469E1 /* ToolbarController.swift in Sources */,
 				C2E12DC726BC1F0B002469E1 /* SidebarMenu.swift in Sources */,
 				C2E12DC126BAF1D5002469E1 /* SidebarViewController.swift in Sources */,
 				C20E729426B5B81D006315A6 /* AppDelegate.swift in Sources */,
+				C2E12DCC26BC269A002469E1 /* SidebarActions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
