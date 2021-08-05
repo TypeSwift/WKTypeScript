@@ -19,7 +19,19 @@ enum SidebarMenu: String, CaseIterable {
     case develop = "Develop"
     case categories = "Categories"
     case updates = "Updates"
-    
+    // MARK: Item Image
+    var title: NSImage {
+        switch self {
+        case .discover: return NSImage(named: "Discover")!
+        case .arcade:  return NSImage(named: "Arcade")!
+        case .create: return NSImage(named: "Create")!
+        case .work: return NSImage(named: "Work")!
+        case .play: return NSImage(named: "Play")!
+        case .develop: return NSImage(named: "Develop")!
+        case .categories: return NSImage(named: "Categories")!
+        case .updates: return NSImage(named: "Updates")!
+        }
+    }
     // MARK: Item Image
     var icon: NSImage {
         switch self {

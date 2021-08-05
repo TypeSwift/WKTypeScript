@@ -43,18 +43,40 @@ extension SidebarViewController: NSOutlineViewDataSource {
         return 40.0
     }
         @objc func windowLostFocus(_ notification: Notification) {
-          setRowColour(sidebar, false)
+            didSelectRow(sidebar, false)
+            setRowColour(sidebar, false)
         }
     
         @objc func windowGainedFocus(_ notification: Notification) {
-          setRowColour(sidebar, true)
+            didSelectRow(sidebar, true)
+            setRowColour(sidebar, true)
         }
     
     // When a row is selected
     func outlineViewSelectionDidChange(_ notification: Notification) {
         if let outlineView = notification.object as? NSOutlineView {
+            didSelectRow(outlineView, true)
             setRowColour(outlineView, true)
         }
+    }
+    
+    func didSelectRow(_ outlineView: NSOutlineView, _ windowFocused: Bool) {
+        let rows = IndexSet(integersIn: 0..<outlineView.numberOfRows)
+        let rowViews = rows.compactMap { outlineView.rowView(atRow: $0, makeIfNecessary: false) }
+        var initialLoad = true
+        // Iterate over each row in the outlineView
+        for rowView in rowViews {
+            if rowView.isSelected { initialLoad = false }
+            if windowFocused && rowView.isSelected {
+                print("row selected: \(rowViews.debugDescription)")
+                rowView.backgroundColor = rowBackgroundColor
+            } else if rowView.isSelected {
+                rowView.backgroundColor = rowBackgroundColor
+            } else {
+                rowView.backgroundColor = .clear
+            }
+        }
+        if initialLoad { self.setInitialRowColour() }
     }
     
     func setRowColour(_ outlineView: NSOutlineView, _ windowFocused: Bool) {
