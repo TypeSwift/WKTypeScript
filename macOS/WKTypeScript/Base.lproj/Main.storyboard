@@ -11,8 +11,8 @@
         <!--Window Controller-->
         <scene sceneID="qEf-JZ-pyW">
             <objects>
-                <windowController id="hhK-Vp-Lwn" sceneMemberID="viewController">
-                    <window key="window" title="WKTypeScript" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="m4t-gC-Od4">
+                <windowController id="hhK-Vp-Lwn" customClass="WindowController" customModule="WKTypeScript" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" title="WKTypeScript" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" id="m4t-gC-Od4">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="245" y="311" width="900" height="400"/>
@@ -21,7 +21,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="900" height="400"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </view>
-                        <toolbar key="toolbar" implicitIdentifier="09D11707-F4A3-4FD5-970E-AC5832E91C2B" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="5zA-5C-KVN">
+                        <toolbar key="toolbar" implicitIdentifier="09D11707-F4A3-4FD5-970E-AC5832E91C2B" autosavesConfiguration="NO" displayMode="iconOnly" sizeMode="regular" id="5zA-5C-KVN">
                             <allowedToolbarItems>
                                 <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="EOx-2j-TWw"/>
                                 <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="UdO-2e-pgs"/>
@@ -73,29 +73,28 @@
         <scene sceneID="Mx4-Lx-36P">
             <objects>
                 <viewController id="FI9-rv-EzI" customClass="SidebarViewController" customModule="WKTypeScript" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" misplaced="YES" id="aeG-zh-3La">
+                    <view key="view" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aeG-zh-3La">
                         <rect key="frame" x="0.0" y="0.0" width="190" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                         <subviews>
                             <visualEffectView misplaced="YES" blendingMode="behindWindow" material="sidebar" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="fT9-eq-QcU">
                                 <rect key="frame" x="0.0" y="0.0" width="190" height="600"/>
                             </visualEffectView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ikz-7I-fFW">
-                                <rect key="frame" x="12" y="464" width="60" height="60"/>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ikz-7I-fFW">
+                                <rect key="frame" x="12" y="480" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="32u-Vv-4an"/>
                                     <constraint firstAttribute="width" constant="60" id="4rv-Am-qkO"/>
                                 </constraints>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Sidebar-Header-Icon" id="cXV-e7-Bf4"/>
                             </imageView>
-                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="40" horizontalPageScroll="10" verticalLineScroll="40" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWF-uv-CAf">
-                                <rect key="frame" x="0.0" y="0.0" width="190" height="452"/>
+                            <scrollView misplaced="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="40" horizontalPageScroll="10" verticalLineScroll="40" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWF-uv-CAf">
+                                <rect key="frame" x="0.0" y="0.0" width="190" height="468"/>
                                 <clipView key="contentView" drawsBackground="NO" id="gMs-0d-iBU">
-                                    <rect key="frame" x="0.0" y="0.0" width="190" height="452"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="190" height="468"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" autosaveColumns="NO" rowHeight="40" rowSizeStyle="automatic" viewBased="YES" indentationPerLevel="14" outlineTableColumn="8Xg-5e-Vj7" id="LLC-6A-FBH">
-                                            <rect key="frame" x="0.0" y="0.0" width="190" height="452"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="190" height="468"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="3" height="0.0"/>
                                             <color key="backgroundColor" red="0.0" green="0.41176470590000003" blue="0.85098039219999999" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -124,6 +123,9 @@
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
                                                                     </textFieldCell>
+                                                                    <connections>
+                                                                        <outlet property="delegate" destination="FI9-rv-EzI" id="0ZC-VO-1ar"/>
+                                                                    </connections>
                                                                 </textField>
                                                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eBR-4H-uwa">
                                                                     <rect key="frame" x="3" y="11" width="18" height="18"/>
@@ -149,6 +151,10 @@
                                                     </prototypeCellViews>
                                                 </tableColumn>
                                             </tableColumns>
+                                            <connections>
+                                                <outlet property="dataSource" destination="FI9-rv-EzI" id="1f5-63-rxp"/>
+                                                <outlet property="delegate" destination="FI9-rv-EzI" id="So1-cg-paV"/>
+                                            </connections>
                                         </outlineView>
                                     </subviews>
                                     <nil key="backgroundColor"/>
@@ -166,7 +172,7 @@
                         <constraints>
                             <constraint firstItem="ikz-7I-fFW" firstAttribute="leading" secondItem="aeG-zh-3La" secondAttribute="leading" constant="12" id="6j7-4J-bYT"/>
                             <constraint firstAttribute="trailing" secondItem="vWF-uv-CAf" secondAttribute="trailing" id="8hu-LU-AGr"/>
-                            <constraint firstItem="ikz-7I-fFW" firstAttribute="top" secondItem="aeG-zh-3La" secondAttribute="top" constant="40" id="93b-7d-oD2"/>
+                            <constraint firstItem="ikz-7I-fFW" firstAttribute="top" secondItem="aeG-zh-3La" secondAttribute="top" constant="60" id="93b-7d-oD2"/>
                             <constraint firstItem="fT9-eq-QcU" firstAttribute="top" secondItem="aeG-zh-3La" secondAttribute="top" id="LlC-0o-Ce9"/>
                             <constraint firstAttribute="trailing" secondItem="fT9-eq-QcU" secondAttribute="trailing" id="PrW-ad-ImS"/>
                             <constraint firstAttribute="bottom" secondItem="fT9-eq-QcU" secondAttribute="bottom" id="Xxo-aE-MNT"/>
@@ -176,10 +182,13 @@
                             <constraint firstItem="vWF-uv-CAf" firstAttribute="top" secondItem="ikz-7I-fFW" secondAttribute="bottom" constant="12" id="xar-wM-DaB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="sidebar" destination="LLC-6A-FBH" id="DZ0-TI-Q0X"/>
+                    </connections>
                 </viewController>
                 <customObject id="KvS-vd-nac" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-280" y="377"/>
+            <point key="canvasLocation" x="-280" y="387"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="NwU-Ff-VXC">
