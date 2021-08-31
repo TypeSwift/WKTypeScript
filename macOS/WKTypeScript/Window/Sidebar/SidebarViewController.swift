@@ -10,7 +10,7 @@ import Cocoa
 class SidebarViewController: NSViewController {
 
     @IBOutlet var sidebar: NSOutlineView!
-    var rowBackgroundColor = NSColor(red: 0.00, green: 0.48, blue: 1.00, alpha: 1.00)
+    var rowBackgroundColor = NSColor(red: 0, green: 0.48, blue: 1, alpha: 1)
     
     override func viewDidLoad() {
         super.viewDidLoad()
